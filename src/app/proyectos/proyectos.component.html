@@ -1,0 +1,41 @@
+<section id="proyectos" class="proyectos">
+    <div class="container text-center">
+        <div>
+        <h1 class="titulos">Proyectos</h1>
+        </div>
+      
+        <div class="row" *ngFor="let proyectos of proyecto">
+            
+            <div class="col-7 mt-2">
+              <h3 class="nombre">{{proyectos.nombre}}</h3>
+              <h4 class="descripcion">{{proyectos.descripcion}} </h4>
+              <h6 class="fecha">{{proyectos.fecha}} </h6>
+            </div>
+            <div class="col-3">
+              <img src="assets/IMG/{{proyectos.img}} " class="rounded w-50 img-fluid" alt="foto de perfil" title="foto de perfil">
+            </div>
+            <div class="col-3"></div>
+        </div>
+<!--
+        <div class="row">
+            <div class="col-3"></div>
+        </div>
+
+          <div class="row">
+            
+            <div class="col-7 mt-2">
+              <h3 class="nombre">Nombre del proyecto</h3>
+              <h4 class="descripcion">descripción. descripción. descripción. descripción. descripción. descripción</h4>
+              <h6 class="fecha">Fecha</h6>
+            </div>
+            <div class="col-3">
+              <img src="assets/IMG/61263271-cuenta-de-usuario-perfil-del-icono-del-círculo-plana-para-aplicaciones-y-sitios-web.jpeg" class="rounded w-50 img-fluid" alt="foto de perfil" title="foto de perfil">
+            </div>
+            <div class="col-3"></div>
+          </div>
+-->
+        <div class="row">
+            <div class="col-3"></div>
+        </div>
+    </div>
+    </section>

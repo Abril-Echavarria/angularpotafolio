@@ -1,0 +1,22 @@
+.container.text-center.foto{
+    position: absolute;
+    margin-top: 10%;
+    top: -10%;
+    left: 10%;
+}
+section.carouse{
+    position: relative;
+}
+
+.col-3{
+    margin-top: 2%;
+    margin-left: 10%;
+}
+h1{
+    padding-top: 1%;
+    font-size:3vw;
+    color: #ebf2f8;
+    font-family: monospace;
+    font: bold 3vw monospace;
+    
+}

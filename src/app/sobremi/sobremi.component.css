@@ -1,0 +1,42 @@
+
+/*TEXTOS*/
+
+h1.intro{
+    padding-top: 15%;
+    font-size: 3rem;
+    color: #ebf2f8;
+    
+}
+
+h1.titulos{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: #ebf2f8;
+    font: bold 350% monospace;
+
+    
+
+}
+/*
+.rounded-circle.w-50.img-fluid{
+    margin-left: 60%;
+    margin-top: 3%;
+}*/
+
+h3.nombre{
+    margin-top: 10%;
+    margin-left: -36%;
+    color: #ebf2f8;
+}
+
+h4.descripcion{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #ebf2f8;
+    font-family: monospace;
+}
+
+

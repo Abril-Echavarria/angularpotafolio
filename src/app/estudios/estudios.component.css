@@ -1,0 +1,47 @@
+/*TEXTOS*/
+
+h1.intro{
+    padding-top: 15%;
+    font-size: 3rem;
+    color: #ebf2f8;
+    
+}
+
+h1.titulos{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: #ebf2f8;
+    font: bold 350% monospace;
+    
+
+}
+
+h3.nombre{
+    margin-top: 10%;
+    text-align: left;
+    margin-left: 10%;
+    color: #ebf2f8;
+    font: bold 180% monospace;
+}
+
+h4.descripcion{
+    text-align: left;
+    margin-left: 10%;
+    color: #ebf2f8;
+    margin-right: 10%;
+    font-family: monospace;
+}
+
+h6.fecha{
+    text-align: left;
+    margin-left: 10%;
+    color: #ebf2f8;
+}
+
+.col-3{
+    text-align: center;
+    margin-top: 7%;
+}
+

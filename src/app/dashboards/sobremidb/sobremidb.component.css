@@ -1,0 +1,75 @@
+section.editar{
+    margin-top: 5%;
+    align-items: center;
+    margin-right: 0%;
+}
+.row.lineas{
+    margin-top: 10%;
+    margin-right: -20%;
+}
+
+.container.text-center.F{
+    position: absolute;
+    margin-left: 0%;
+    width: 70rem;
+    
+}
+
+h5.descripcion{
+    text-align: left;
+    margin-bottom: -2%;
+    margin-top: 4%;
+}
+
+.col-md-10{
+    margin-top: 2.5%;
+    
+}
+.col-md-1{
+    margin-top: 2.5%;
+    
+}
+
+.nav.flex-column.nav-pills.me-3{
+    margin-top: 5%;
+    width: 20%;
+
+}
+
+h1.titulos{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #ebf2f8;
+    font: bold 350% monospace;
+
+    
+
+}
+/*
+.rounded-circle.w-50.img-fluid{
+    margin-left: 60%;
+    margin-top: 3%;
+}*/
+
+h3.nombre{
+    margin-top: 10%;
+    margin-left: -39%;
+    color: #ebf2f8;
+    font: bold 180% monospace;
+}
+
+h4.descripcion{
+    text-align: left;
+    margin-left: 10%;
+    color: #ebf2f8;
+    margin-right: 10%;
+    font-family: monospace;
+}
+
+h6.fecha{
+    text-align: left;
+    margin-left: 10%;
+    color: #ebf2f8;
+}

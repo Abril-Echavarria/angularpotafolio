@@ -1,0 +1,38 @@
+select.contacto{
+    color: #ffffff;
+}
+
+.fa-sharp.fa-solid.fa-user.fa-3x{
+    color: #ffffff;
+    margin-right:-9rem;
+    margin-top: -0.5rem;
+}
+
+.fa-sharp.fa-solid.fa-envelope.fa-3x{
+    color: #ffffff;
+    margin-right:-9rem;
+    margin-top: -0.5rem;
+}
+.fa-solid.fa-pen-to-square.fa-3x{
+    color: #ffffff;
+    margin-right:-9rem;
+    margin-top: -0.5rem;
+}
+
+.btn.btn-primary.btn-lg{
+    margin-top: 1rem;
+}
+
+.row.contacto{
+    margin-top: 3rem;
+}
+
+h1.titulos{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: #ebf2f8;
+    font: bold 350% monospace;
+}
+

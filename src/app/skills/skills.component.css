@@ -1,0 +1,22 @@
+/*Skills*/
+
+section.skills{
+    margin-left: 15%;
+    margin-right: 15%;
+   
+}
+
+h3.nombre-skill{
+    color: #ffffff;
+    font: bold 180% monospace;
+    margin-top: 2rem;
+}
+
+h1.titulos{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: #ebf2f8;
+    font: bold 350% monospace;
+}

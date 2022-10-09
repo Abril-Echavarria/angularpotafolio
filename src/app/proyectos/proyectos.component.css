@@ -1,0 +1,46 @@
+h1.titulos{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    color: #ebf2f8;
+    font: bold 350% monospace;
+    
+
+}
+/*
+.rounded-circle.w-50.img-fluid{
+    margin-left: 60%;
+    margin-top: 3%;
+}*/
+
+h3.nombre{
+    margin-top: 10%;
+    margin-left: 10%;
+    text-align: left;
+    color: #ebf2f8;
+    font: bold 180% monospace;
+}
+
+h4.descripcion{
+    text-align: left;
+    margin-left: 10%;
+    color: #ebf2f8;
+    margin-right: 10%;
+    font-family: monospace;
+}
+
+h6.fecha{
+    text-align: left;
+    margin-left: 10%;
+    color: #ebf2f8;
+}
+
+section.proyectos{
+    margin-left: 10%;
+}
+.col-3{
+    text-align: center;
+    margin-top: 7%;
+}
+

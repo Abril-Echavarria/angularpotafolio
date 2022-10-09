@@ -1,0 +1,36 @@
+section.editar{
+    margin-top: 5%;
+    align-items: center;
+    margin-right: 0%;
+}
+.row.lineas{
+    margin-top: 10%;
+    margin-right: -20%;
+}
+
+.container.text-center.F{
+    margin-left: 2%;
+    margin-top: -10%;
+
+}
+
+h5.descripcion{
+    text-align: left;
+    margin-bottom: -2%;
+    margin-top: 4%;
+}
+
+.col-md-10{
+    margin-top: 2.5%;
+    
+}
+.col-md-1{
+    margin-top: 2.5%;
+    
+}
+
+.nav.flex-column.nav-pills.me-3{
+    margin-top: 5%;
+    width: 20%;
+    margin-bottom: 90%;
+}

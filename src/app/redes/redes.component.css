@@ -1,0 +1,48 @@
+.fa-brands.fa-linkedin-in.fa-2xl{
+    color: #ffffff;
+}
+.fa-brands.fa-linkedin-in.fa-2xl:hover{
+    color: #0400ff;
+}
+
+.fa-brands.fa-instagram.fa-2xl{
+    color: #ffffff;
+}
+
+.fa-brands.fa-instagram.fa-2xl:hover{
+    color: #f01adb;
+}
+
+.fa-brands.fa-github.fa-2xl{
+    color: #ffffff;
+}
+
+.fa-brands.fa-github.fa-2xl:hover{
+    color: #ae22d8;
+}
+
+.fa-sharp.fa-solid.fa-user-secret.fa-2xl:hover{
+    color: #d60000;
+}
+
+.fa-sharp.fa-solid.fa-user.fa-2xl:hover{
+    color: #ff0000;
+}
+
+.list-group-item{
+
+    background-color: transparent;
+    color: #ffffff;
+    border-color: transparent;
+    margin-right: 0%;
+
+}
+
+ul.list-group.list-group-horizontal{
+    margin-right: -90%;
+
+}
+ul{
+    margin-right: -100%;
+    margin-left: 80%;
+}

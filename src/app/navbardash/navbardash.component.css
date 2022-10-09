@@ -1,0 +1,15 @@
+/*BARRA*/
+.navbar.navbar-expand-lg.bg-dark{
+   /* background: #020024;
+background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(91,3,157,1) 67%, rgba(17,9,194,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(91,3,157,1) 67%, rgba(17,9,194,1) 100%);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(91,3,157,1) 67%, rgba(17,9,194,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#1109c2",GradientType=1);*/
+
+background: rgb(2,0,36);
+background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(182,87,191,1) 0%, rgba(101,38,181,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(182,87,191,1) 0%, rgba(101,38,181,1) 100%);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(182,87,191,1) 0%, rgba(101,38,181,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#6526b5",GradientType=1);
+
+}

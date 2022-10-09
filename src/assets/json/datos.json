@@ -1,0 +1,114 @@
+{
+    "nombre":"Abril Victoria",
+    "apellido":"Echavarria Leguizamón",
+
+    "fotomia":{
+        "texto":"Hola, soy Abril Echavarria. Desarrolladora Full Stack Jr.",
+        "img":"Unknown.jpeg"
+    },
+
+    "carouse":[
+        {
+            "id":0,
+            "img":"Slide12.jpg"
+        },
+        {
+            "id":1,
+            "img":"Slide13.jpg"
+        },
+        {
+            "id":2,
+            "img":"Slide14.jpg"
+        },
+        {
+            "id":3,
+            "img":"Slide11.jpg"
+        }
+    ],
+
+    "educacion":[
+        {
+            "id": 0,
+            "nombre":"Instituto Argentino Excelsior",
+            "descripcion":"Bachiller en Economía y Administración",
+            "fecha":"2018-2022",
+            "img":"excelsior.png"
+        },
+
+        {
+            "id": 1,
+            "nombre":"Argentina Programa",
+            "descripcion":"Yo Programo",
+            "fecha":"2022-2022",
+            "img":"APLogo-20-20.png"
+        }
+    ],
+
+    "skills":[
+        {
+            "id":0,
+            "nombre":"HTML",
+            "porcentaje":"70"
+        },
+
+        {
+            "id":1,
+            "nombre":"CSS",
+            "porcentaje":"10"
+        },
+
+        {
+            "id":2,
+            "nombre":"BOOSTRAP",
+            "porcentaje":"20"
+        },
+
+        {
+            "id":3,
+            "nombre":"ANGULAR",
+            "porcentaje":"10"
+        },
+
+        {
+            "id":4,
+            "nombre":"Ejemplo 4",
+            "porcentaje":"40"
+        }
+
+    ],
+
+    "proyectos":[
+        {
+            "id":0,
+            "nombre":"Mi portafolio web",
+            "descripcion":"Este mismo sitio  web.",
+            "fecha":"2022",
+            "img":"Unknown.jpeg"
+        },
+        {
+            "id":1,
+            "nombre":"Mi portafolio de dibujo",
+            "descripcion":"Pronto",
+            "fecha":"2023",
+            "img":"Unknown.jpeg"
+        }
+    ],
+
+    "experiencia":[
+        {
+            "id":0,
+            "nombre":"Ejemplo 1",
+            "descripcion":"ni idea que poner",
+            "fecha":"20??",
+            "img":"Unknown.jpeg"
+        },
+
+        {
+            "id":1,
+            "nombre":"Ejemplo 2",
+            "descripcion":"ni idea que poner",
+            "fecha":"20??",
+            "img":"Unknown.jpeg"
+        }
+    ]
+}
