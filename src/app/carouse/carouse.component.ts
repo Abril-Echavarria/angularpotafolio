@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Carrusel } from '../model/carrusel';
+import { CarruselService } from '../servicios/carrusel.service';
 import { PortafolioService } from "../servicios/portafolio.service";
 
 @Component({
@@ -8,16 +10,18 @@ import { PortafolioService } from "../servicios/portafolio.service";
 })
 export class CarouseComponent implements OnInit {
 
-  img: any;
+  img: Carrusel[]=[];
 
-  constructor(private portafolioService: PortafolioService) { }
+  constructor(private carruselService: CarruselService) { }
 
   ngOnInit(): void {
-    this.portafolioService.getDatos().subscribe(datos=> {
-      //console.log(datos);
-      //this.infoPortafolio.uno;
-      this.img=datos.carouse;
-    })
+
+    this.cargarCarrusel();
+  
+  }
+
+  cargarCarrusel():void{
+    this.carruselService.list().subscribe(data=>{this.img=data} );
   }
 
 }

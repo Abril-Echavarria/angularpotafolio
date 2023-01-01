@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { PortafolioService } from './servicios/portafolio.service';
+import { ExpeService } from './servicios/expe.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +32,7 @@ import { ExperienciadbComponent } from './dashboards/experienciadb/experienciadb
 import { EstudiosdbComponent } from './dashboards/estudiosdb/estudiosdb.component';
 import { ProyectosdbComponent } from './dashboards/proyectosdb/proyectosdb.component';
 import { SkillsdbComponent } from './dashboards/skillsdb/skillsdb.component';
+import { Skill2Component } from './dashboards/skill2/skill2.component';
 
 @NgModule({
   declarations: [
@@ -57,12 +60,14 @@ import { SkillsdbComponent } from './dashboards/skillsdb/skillsdb.component';
     ExperienciadbComponent,
     EstudiosdbComponent,
     ProyectosdbComponent,
-    SkillsdbComponent
+    SkillsdbComponent,
+    Skill2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

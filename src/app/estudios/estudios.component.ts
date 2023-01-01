@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortafolioService } from "../servicios/portafolio.service";
+import { Estudio } from '../model/estudio';
+import { EstudioService } from '../servicios/estudio.service';
+/*import { PortafolioService } from "../servicios/portafolio.service";*/
 
 @Component({
   selector: 'app-estudios',
@@ -8,17 +10,16 @@ import { PortafolioService } from "../servicios/portafolio.service";
 })
 export class EstudiosComponent implements OnInit {
 
-  estudios: any=[];
+  estudios: Estudio[]=[]
 
-  constructor(private portafolioService: PortafolioService) { }
+  constructor(private estudioService: EstudioService) { }
 
   ngOnInit(): void {
+    this.cargarEstudio();
+  }
 
-    this.portafolioService.getDatos().subscribe(datos=> {
-      //console.log(datos);
-      //this.infoPortafolio.uno;
-      this.estudios=datos.educacion;
-    })
+  cargarEstudio(): void{
+    this.estudioService.list().subscribe(data=>(this.estudios=data));
   }
 
 }

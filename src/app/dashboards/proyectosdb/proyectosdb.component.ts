@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PortafolioService } from "../../servicios/portafolio.service";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Proyecto } from 'src/app/model/proyecto';
+import { ProyectoService } from 'src/app/servicios/proyecto.service';
+/*import { PortafolioService } from "../../servicios/portafolio.service";*/
 
 @Component({
   selector: 'app-proyectosdb',
@@ -8,15 +11,105 @@ import { PortafolioService } from "../../servicios/portafolio.service";
 })
 export class ProyectosdbComponent implements OnInit {
 
-  proyecto: any;
-  constructor(private portafolioService: PortafolioService) { }
+  form:FormGroup;
+  id!: number;
+  titulo: string='';
+  descripcion: string='';
+  fechai: string='';
+  fechaf: string='';
+  img: string=''
+
+  proyectos: Proyecto[]=[];
+  
+  constructor(private proyectoS: ProyectoService, private formBouilder: FormBuilder) {
+    this.form= this.formBouilder.group({
+      titulo:['',[Validators.required] ],
+      descripcion:[''],
+      fechai:[''],
+      fechaf:[''],
+      img:['']
+    })
+   }
 
   ngOnInit(): void {
-    this.portafolioService.getDatos().subscribe(datos=> {
-      //console.log(datos);
-      //this.infoPortafolio.uno;
-      this.proyecto=datos.proyectos;
-    })
+
+    this.cargarProyecto();
+
   }
+
+  onCreate(): void{
+    const proyecto= new Proyecto(this.titulo, this.descripcion, this.fechai, this.fechaf, this.img);
+    this.proyectoS.create(proyecto).subscribe(data=>{alert("Proyecto añadido")
+    window.location.reload();
+  } )
+  }
+
+  limpiar(): void{
+    this.form.reset();
+  }
+
+  delete(id: number): void{
+    this.proyectoS.delete(id).subscribe(data=>{
+      this.cargarProyecto();
+    } )
+  }
+
+  cargarProyecto():void{
+    this.proyectoS.list().subscribe(data => {this.proyectos=data});
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if(this.form.valid){
+      this.onCreate();
+    }else{
+      alert("Fallo en la carga.");
+      this.form.markAllAsTouched();
+    }
+  }
+
+
+
+  get Titulo(){
+    return this.form.get("titulo");
+  }
+
+  get Descripcion(){
+    return this.form.get("descripcion");
+  }
+
+  get Fechaf(){
+    return this.form.get("fechaf");
+  }
+
+  get Fechai(){
+    return this.form.get("fechai");
+  }
+
+  get Img(){
+    return this.form.get("img");
+  }
+
+  get tituloValid(){
+    return this.Titulo?.touched && !this.Titulo?.valid;
+  }
+
+  get descripcionValid(){
+    return this.Descripcion?.touched && !this.Descripcion?.valid;
+  }
+
+  get fechaiValid(){
+    return this.Fechai?.touched && !this.Fechai?.valid;
+  }
+
+  get fechafValid(){
+    return this.Fechaf?.touched && !this.Fechaf?.valid;
+  }
+
+  get imgValid(){
+    return this.Img?.touched && !this.Img?.valid;
+  }
+
+
 
 }

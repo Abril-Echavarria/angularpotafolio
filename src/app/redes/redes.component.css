@@ -43,6 +43,17 @@ ul.list-group.list-group-horizontal{
 
 }
 ul{
-    margin-right: -100%;
-    margin-left: 80%;
+    right: 10%;
+   
 }
+
+li{
+    right: -4rem;
+}
+/*
+ul{
+    position: absolute;
+    top: 30%;
+    left: 80%;
+
+}*/

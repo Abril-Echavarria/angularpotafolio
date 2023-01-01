@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortafolioService } from '../servicios/portafolio.service';
+import { Persona } from '../model/persona';
+import { PersonaService } from '../servicios/persona.service';
+/*import { PortafolioService } from '../servicios/portafolio.service';*/
 
 
 @Component({
@@ -10,16 +12,17 @@ import { PortafolioService } from '../servicios/portafolio.service';
 export class FotoMiaComponent implements OnInit {
   //Aqui podes poner datos puntuales nombre="Abril"
 
-  info: any;
+ personas: Persona[]=[];
   
-  constructor(private portafolioService: PortafolioService) { }
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.portafolioService.getDatos().subscribe(datos=> {
-      console.log(datos);
-      //this.infoPortafolio.uno;
-      this.info=datos.fotomia
-    })
+
+    this.cargarPersona();
+
   }
+
+  cargarPersona():void{
+    this.personaService.list().subscribe(data =>{this.personas=data});  }
 
 }

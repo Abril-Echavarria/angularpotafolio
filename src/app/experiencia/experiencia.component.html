@@ -4,16 +4,16 @@
       <div>
         <h1 class="titulos">Experiencia Laboral</h1>
       </div>
-      <div class="row" *ngFor="let expe of experiencia">
+      <div class="row" *ngFor="let expe of experiencias">
           
           <div class="col-7 mt-2">
-            <h3 class="nombre">{{expe.nombre}}</h3>
+            <h3 class="nombre">{{expe.titulo}}</h3>
             <h4 class="descripcion">{{expe.descripcion}} </h4>
-            <h6 class="fecha">{{expe.fecha}}</h6>
+            <h6 class="fecha">{{expe.fechai}} => {{expe.fechaf}} </h6>
           </div>
 
           <div class="col-3">
-            <img src="assets/IMG/{{expe.img}} " class="rounded-circle w-50 img-fluid" alt="foto de perfil" title="foto de perfil">
+            <img [src]="expe.img" class="rounded-circle w-50 img-fluid" alt="foto de perfil" title="foto de perfil">
           </div>
 
           <div class="col-3">

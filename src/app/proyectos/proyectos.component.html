@@ -4,12 +4,12 @@
         <h1 class="titulos">Proyectos</h1>
         </div>
       
-        <div class="row" *ngFor="let proyectos of proyecto">
+        <div class="row" *ngFor="let proyectos of proyectos">
             
             <div class="col-7 mt-2">
-              <h3 class="nombre">{{proyectos.nombre}}</h3>
+              <h3 class="nombre">{{proyectos.titulo}}</h3>
               <h4 class="descripcion">{{proyectos.descripcion}} </h4>
-              <h6 class="fecha">{{proyectos.fecha}} </h6>
+              <h6 class="fecha">{{proyectos.fechai}} => {{proyectos.fechaf}}  </h6>
             </div>
             <div class="col-3">
               <img src="assets/IMG/{{proyectos.img}} " class="rounded w-50 img-fluid" alt="foto de perfil" title="foto de perfil">

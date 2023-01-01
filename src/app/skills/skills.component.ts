@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortafolioService } from "../servicios/portafolio.service";
+import { Skill } from '../model/skill';
+/*import { PortafolioService } from "../servicios/portafolio.service";*/
+import { SkillService } from '../servicios/skill.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,17 +10,18 @@ import { PortafolioService } from "../servicios/portafolio.service";
 })
 export class SkillsComponent implements OnInit {
 
-  skills: any=[];
+  skills: Skill[]=[];
 
-  constructor(private portafolioService: PortafolioService) { }
+  constructor(private skillService: SkillService) { }
 
   ngOnInit(): void {
-    this.portafolioService.getDatos().subscribe(datos=> {
-      //console.log(datos);
-      //this.infoPortafolio.uno;
-      this.skills=datos.skills;
-    })
 
+    this.cargarSkill();
+
+  }
+
+  cargarSkill():void{
+    this.skillService.list().subscribe(data=>{this.skills=data} );
   }
 
 }

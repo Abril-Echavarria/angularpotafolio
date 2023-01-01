@@ -10,18 +10,22 @@
     "carouse":[
         {
             "id":0,
+            "nombre":"experiencia",
             "img":"Slide12.jpg"
         },
         {
             "id":1,
+            "nombre":"educacion",
             "img":"Slide13.jpg"
         },
         {
             "id":2,
+            "nombre":"skills",
             "img":"Slide14.jpg"
         },
         {
             "id":3,
+            "nombre":"proyectos",
             "img":"Slide11.jpg"
         }
     ],
