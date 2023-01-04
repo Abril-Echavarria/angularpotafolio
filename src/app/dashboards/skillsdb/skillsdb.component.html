@@ -1,12 +1,14 @@
 <div>
                       
     <div class="input-group mb-3">
+     <form [formGroup]="form" (ngSubmit)="onEnviar($event)" >
+
       <div class="row">
           <div>
               <h1 class="titulos">Hard y soft skills</h1>
           </div>
      
-     <!--Cambiar ID-->
+     <!--Cambiar ID
         
          <h5 class="descripcion" >ID</h5>
           <div class="col-md-10">
@@ -14,7 +16,7 @@
           <div class="mb-4">
            <input class="form-control" type="text" aria-label="default input example" placeholder="Completar sólo en caso de querer editar" formControlName="id" [(ngModel)]="id">
           </div>
-          </div>
+          </div>-->
   
             <!--Cambiar nombre-->
             <h5 class="descripcion" >Nombre</h5>
@@ -35,7 +37,6 @@
         </div>
 
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-          <button type="button" class="btn btn-warning" >Actualizar</button>
           <button type="button" class="btn btn-success"(click)="onCreate()" >Crear</button>
         </div>
         
@@ -103,6 +104,19 @@
          </div>
 -->
       </div>
+    </form>
+
+    <div class="container text-centre A" *ngFor="let skill of skill">
+      <div class="row">
+        <div class="col-6">
+          <h1>{{skill.nombre}}</h1>
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-danger" (click)="delete(skill.id)" >Borrar</button>
+          <button type="button" class="btn btn-warning"  >Editar</button>
+       </div>
+      </div>
+    </div>
     </div>
         
   </div>

@@ -27,15 +27,23 @@ export class SkillsdbComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.cargarSkill();
+
   }
 
   onCreate(): void{
     const skill= new Skill(this.nombre,this.numero);
-    this.skillS.create(skill).subscribe(data=>{alert("Skill añadido")
+    this.skillS.create(skill).subscribe(data=>{
+    alert("Skill añadido")
     window.location.reload();  
   } )
   }
-
+  delete(id: number): void{
+    this.skillS.delete(id).subscribe(data=>{
+      alert("se pudo eliminar satisfactoriamente")
+      this.cargarSkill();
+    }  ) 
+  }
   cargarSkill():void{
     this.skillS.list().subscribe(data => {this.skill=data});
   }
@@ -43,6 +51,7 @@ export class SkillsdbComponent implements OnInit {
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
+      alert("Skill añadido")
       this.onCreate();
     }else{
       alert("Fallo en la carga.");
@@ -53,11 +62,7 @@ export class SkillsdbComponent implements OnInit {
   limpiar(): void{
     this.form.reset();
   }
-  delete(id: number): void{
-    this.skillS.delete(id).subscribe(data=>{
-      this.cargarSkill();
-    } )
-  }
+
 
 
   get Nombre(){

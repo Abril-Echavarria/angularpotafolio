@@ -28,17 +28,13 @@ h1.titulos{
     text-align: center;
     margin-top: 5%;
     margin-bottom: 5%;
+    margin-right: 15rem;
     color: #ebf2f8;
     font: bold 350% monospace;
 
     
 
 }
-/*
-.rounded-circle.w-50.img-fluid{
-    margin-left: 60%;
-    margin-top: 3%;
-}*/
 
 h3.nombre{
     margin-top: 10%;
@@ -85,6 +81,12 @@ h6.fecha{
     width: 83%;
 }
 
-.btn.btn-warning{
-    margin-left: 3rem;
+.input-group{
+    text-align: center;
+    align-items: center;
+}
+
+.row{
+    align-items: center;
+    margin-left: 15rem;
 }

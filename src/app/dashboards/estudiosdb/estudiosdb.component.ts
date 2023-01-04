@@ -45,6 +45,7 @@ export class EstudiosdbComponent implements OnInit {
   }
   delete(id: number): void{
     this.estudioService.delete(id).subscribe(data=>{
+      alert("se pudo eliminar satisfactoriamente")
       this.cargarEstudio();
     } )
   }

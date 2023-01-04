@@ -25,7 +25,11 @@ export class EstudioService {
   }
 
   public delete(id: number) : Observable<any>{
-    return this.httpClient.delete<any>(this.url + 'borrar/${id} ');
+    return this.httpClient.delete<any>(this.url + `borrar/${id}`);
+  }
+
+  public detail(id: number): Observable<Estudio>{
+    return this.httpClient.get<Estudio>(this.url +  `detail/${id}`);
   }
 
 }

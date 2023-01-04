@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
 
-import { PortafolioService } from './servicios/portafolio.service';
-import { ExpeService } from './servicios/expe.service';
+
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+const routes: Routes =[
+  {path:"principal", component:PrincipalComponent},
+  {path:"dashboard", component:DashboardComponent},
+  {path:"", redirectTo:"/principal", pathMatch:"full"},
+  {path:"persona/:id", component:EditarComponent},
+  {path:"**", component:ErrorComponent}
+ 
+]
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +44,9 @@ import { ProyectosdbComponent } from './dashboards/proyectosdb/proyectosdb.compo
 import { SkillsdbComponent } from './dashboards/skillsdb/skillsdb.component';
 import { Skill2Component } from './dashboards/skill2/skill2.component';
 
+import { EditarComponent } from './editar/editar.component';
+import { Routes } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,13 +74,15 @@ import { Skill2Component } from './dashboards/skill2/skill2.component';
     EstudiosdbComponent,
     ProyectosdbComponent,
     SkillsdbComponent,
-    Skill2Component
+    Skill2Component,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

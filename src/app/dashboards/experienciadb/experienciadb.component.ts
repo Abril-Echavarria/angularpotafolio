@@ -44,7 +44,8 @@ export class ExperienciadbComponent implements OnInit {
 
   onCreate(): void{
     const expe = new Expe(this.titulo, this.descripcion, this.fechai, this.fechaf, this.img);
-    this.expeService.create(expe).subscribe(data=>{alert("Experiencia añadida")
+    this.expeService.create(expe).subscribe(data=>{
+      alert("Experiencia añadida")
       window.location.reload();
   });
   }
@@ -54,22 +55,14 @@ export class ExperienciadbComponent implements OnInit {
   }
   delete(id:number){
     this.expeService.delete(id).subscribe(data=>{
+      alert("se pudo eliminar satisfactoriamente")
       this.cargarExpe();
-    }, err=>{
-      alert("no se pudo eliminar la experiencia")
     }  )
   }
 
   cargarExpe():void{
     this.expeService.list().subscribe(data => {this.experiencias=data});
   }
-
-
-
-
-
-
-
   get Titulo(){
     return this.form.get("titulo");
   }

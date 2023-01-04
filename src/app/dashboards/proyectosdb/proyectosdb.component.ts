@@ -51,6 +51,7 @@ export class ProyectosdbComponent implements OnInit {
   delete(id: number): void{
     this.proyectoS.delete(id).subscribe(data=>{
       this.cargarProyecto();
+      alert("se pudo eliminar satisfactoriamente")
     } )
   }
 

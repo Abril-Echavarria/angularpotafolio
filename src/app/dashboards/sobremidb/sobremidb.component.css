@@ -11,6 +11,7 @@ section.editar{
 .container.text-center.F{
     position: absolute;
     margin-left: 0%;
+
     width: 70rem;
     
 }
@@ -21,20 +22,6 @@ h5.descripcion{
     margin-top: 4%;
 }
 
-.col-md-10{
-    margin-top: 2.5%;
-    
-}
-.col-md-1{
-    margin-top: 2.5%;
-    
-}
-
-.nav.flex-column.nav-pills.me-3{
-    margin-top: 5%;
-    width: 20%;
-
-}
 
 h1.titulos{
     font-size: 3rem;
@@ -72,4 +59,28 @@ h6.fecha{
     text-align: left;
     margin-left: 10%;
     color: #ebf2f8;
+}
+
+.col-md-10{
+    margin-top: 2.5%;
+    
+}
+.col-md-1{
+    margin-top: 2.5%;
+    
+}
+
+.nav.flex-column.nav-pills.me-3{
+    margin-top: 5%;
+    width: 20%;
+}
+
+.container.text-centre.A{
+    margin-top: 4rem;
+    
+}
+
+.btn-group{
+    margin-top: 5%;
+    width: 83%;
 }

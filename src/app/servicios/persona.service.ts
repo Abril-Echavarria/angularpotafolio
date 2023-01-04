@@ -26,7 +26,10 @@ export class PersonaService {
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.url + 'borrar/${{id}}')
+    return this.httpClient.delete<any>(this.url + `borrar/${id}`)
+  }
+  public detail(id: number): Observable<Persona>{
+    return this.httpClient.get<Persona>(this.url + `ver/${id}`);
   }
 
 }

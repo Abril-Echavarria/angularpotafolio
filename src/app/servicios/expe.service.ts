@@ -14,11 +14,11 @@ export class ExpeService {
   public list(): Observable<Expe[]>{
     return this.httpClient.get<Expe[]>(this.url +'lista');
   }
-/*
+
   public detail(id: number): Observable<Expe>{
-    return this.httpClient.get<Expe>(this.url + 'detail/${id}');
+    return this.httpClient.get<Expe>(this.url +  `detail/${id}`);
   }
-  */
+ 
 
   public create(experiencia: Expe): Observable<any>{
     return this.httpClient.post<any>(this.url + 'crear', experiencia);
@@ -29,7 +29,7 @@ export class ExpeService {
   }
 
   public delete(id: number) :Observable<any>{
-    return this.httpClient.delete<any>(this.url + 'borrar/${id}');
+    return this.httpClient.delete<any>(this.url +  `borrar/${id}`);
   }
 
 }

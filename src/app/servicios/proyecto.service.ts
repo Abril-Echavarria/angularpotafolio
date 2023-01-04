@@ -25,7 +25,11 @@ export class ProyectoService {
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.url + 'borrar/${id}')
+    return this.httpClient.delete<any>(this.url + `borrar/${id}`)
+  }
+
+  public detail(id: number): Observable<Proyecto>{
+    return this.httpClient.get<Proyecto>(this.url +  `detail/${id}`);
   }
 
 }

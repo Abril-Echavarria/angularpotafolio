@@ -34,22 +34,17 @@
     background-color: transparent;
     color: #ffffff;
     border-color: transparent;
-    margin-right: 0%;
+ 
 
 }
 
-ul.list-group.list-group-horizontal{
-    margin-right: -90%;
 
-}
 ul{
-    right: 10%;
+ margin-right: 3rem;
    
 }
 
-li{
-    right: -4rem;
-}
+
 /*
 ul{
     position: absolute;

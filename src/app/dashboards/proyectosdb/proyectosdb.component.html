@@ -8,14 +8,14 @@
                 <h1 class="titulos">Proyecto </h1>
             </div>
 
-           <!--Cambiar ID-->
+           <!--Cambiar ID
            <h5 class="descripcion" >ID</h5>
            <div class="col-md-10">
                   
              <div class="mb-4">
                <input class="form-control" type="text" aria-label="default input example" placeholder="Completar sólo en caso de querer editar" formControlName="id" [(ngModel)]="id">
            </div>
-           </div>
+           </div>-->
   
           <!--Subir las fotos, about-->
           <h5 class="descripcion" >Foto del proyecto</h5>
@@ -26,6 +26,15 @@
                 <input type="file" class="form-control" id="inputGroupFile01" formControlName="img" [(ngModel)]="img">
             </div>
           </div>
+
+                    <!--Cambiar nombre-->
+                    <h5 class="descripcion" >Foto del proyecto (URL)</h5>
+                    <div class="col-md-10">
+                      
+                      <div class="mb-4">
+                          <input class="form-control" type="text" aria-label="default input example" formControlName="img" [(ngModel)]="img">
+                      </div>
+                    </div>
          
 
           <!--Cambiar nombre-->
@@ -67,7 +76,6 @@
           </div>
 
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-warning" >Actualizar</button>
             <button type="button" class="btn btn-success"(click)="onCreate()" >Crear</button>
           </div>
 
@@ -75,13 +83,14 @@
         </div>
       </form>
 
-      <div class="container text-centre A" *ngFor="let estudio of proyectos">
+      <div class="container text-centre A" *ngFor="let proyec of proyectos">
         <div class="row">
           <div class="col-6">
-            <h1>{{estudio.titulo}}</h1>
+            <h1>{{proyec.titulo}}</h1>
           </div>
           <div class="col-6">
-            <button type="button" class="btn btn-danger"  >Borrar</button>
+            <button type="button" class="btn btn-danger" (click)="delete(proyec.id)" >Borrar</button>
+            <button type="button" class="btn btn-warning"  >Editar</button>
          </div>
         </div>
       </div>
