@@ -29,7 +29,7 @@ export class ProyectoService {
   }
 
   public detail(id: number): Observable<Proyecto>{
-    return this.httpClient.get<Proyecto>(this.url +  `detail/${id}`);
+    return this.httpClient.get<Proyecto>(this.url +  `ver/${id}`);
   }
 
 }

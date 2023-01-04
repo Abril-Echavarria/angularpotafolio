@@ -29,7 +29,7 @@ export class EstudioService {
   }
 
   public detail(id: number): Observable<Estudio>{
-    return this.httpClient.get<Estudio>(this.url +  `detail/${id}`);
+    return this.httpClient.get<Estudio>(this.url +  `ver/${id}`);
   }
 
 }

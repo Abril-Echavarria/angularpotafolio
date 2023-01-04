@@ -28,7 +28,7 @@ export class SkillService {
     return this.httpClient.delete<any>(this.url + `borrar/${id}`);
   }
   public detail(id: number): Observable<Skill>{
-    return this.httpClient.get<Skill>(this.url +  `detail/${id}`);
+    return this.httpClient.get<Skill>(this.url +  `ver/${id}`);
   }
 
 }

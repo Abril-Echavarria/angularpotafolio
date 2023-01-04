@@ -44,8 +44,13 @@ import { ProyectosdbComponent } from './dashboards/proyectosdb/proyectosdb.compo
 import { SkillsdbComponent } from './dashboards/skillsdb/skillsdb.component';
 import { Skill2Component } from './dashboards/skill2/skill2.component';
 
-import { EditarComponent } from './editar/editar.component';
+import { EditarComponent } from './edit/editar/editar.component';
 import { Routes } from '@angular/router';
+import { CarruseleditComponent } from './edit/carruseledit/carruseledit.component';
+import { EstudioeditComponent } from './edit/estudioedit/estudioedit.component';
+import { ExpeeditComponent } from './edit/expeedit/expeedit.component';
+import { ProyeceditComponent } from './edit/proyecedit/proyecedit.component';
+import { SkilleditComponent } from './edit/skilledit/skilledit.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +80,12 @@ import { Routes } from '@angular/router';
     ProyectosdbComponent,
     SkillsdbComponent,
     Skill2Component,
-    EditarComponent
+    EditarComponent,
+    CarruseleditComponent,
+    EstudioeditComponent,
+    ExpeeditComponent,
+    ProyeceditComponent,
+    SkilleditComponent
   ],
   imports: [
     BrowserModule,

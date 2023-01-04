@@ -1,0 +1,42 @@
+<div class="input-group">
+    <form  [formGroup]="form" (ngSubmit)="onEnviar($event)" >
+        <div class="row">
+            <div>
+                <h1 class="titulos">Estudio</h1>
+            </div>
+       <!--Cambiar ID-->
+       <h5 class="descripcion" >ID</h5>
+         <div class="col-md-10">
+                                  
+         <div class="mb-4">
+           <input class="form-control form-control-lg" type="text" aria-label="default input example"   formControlName="id" [ngModel]="skill.id" >
+         </div>
+         </div>
+
+                   <!--Cambiar nombre-->
+                   <h5 class="descripcion" >Nombre</h5>
+                   <div class="col-md-10">
+                     
+                     <div class="mb-4">
+                         <input class="form-control" type="text" aria-label="default input example" formControlName="nombre" [ngModel]="skill.nombre">
+                     </div>
+                   </div>
+
+         <h5 class="descripcion" >Porcentaje</h5>
+         <div class="col-md-10">
+           
+           <div class="mb-4">
+               <input class="form-control" type="number" min="1" max="100" aria-label="default input example" formControlName="numero" [ngModel]="skill.numero" >
+           </div>
+         </div>
+
+
+
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-info"(click)="onUpdate()" >Guardar</button>
+          </div>
+
+
+        </div>
+    </form>
+</div>

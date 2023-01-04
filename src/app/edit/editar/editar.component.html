@@ -23,6 +23,14 @@
             </div>
           </div>
 
+                              <!--Cambiar nombre-->
+                              <h5 class="descripcion" >Foto de la institución (URL)</h5>
+                              <div class="col-md-10">
+                                
+                                <div class="mb-4">
+                                    <input class="form-control" type="text" aria-label="default input example" formControlName="foto" [ngModel]="perso.foto">
+                                </div>
+                              </div>
 
                     <!--Cambiar nombre-->
           <h5 class="descripcion" >Nombre</h5>
@@ -63,6 +71,10 @@
           <div class="mb-4">
               <input class="form-control" type="text" aria-label="default input example" formControlName="mini" [ngModel]="perso.mini">
           </div>
+        </div>
+
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-info"(click)="onUpdate()" >Guardar</button>
         </div>
 
           

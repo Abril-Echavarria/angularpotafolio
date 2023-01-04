@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Persona } from '../model/persona';
-import { PersonaService } from '../servicios/persona.service';
+import { Persona } from '../../model/persona';
+import { PersonaService } from '../../servicios/persona.service';
 
 @Component({
   selector: 'app-editar',
@@ -84,6 +84,6 @@ export class EditarComponent implements OnInit {
   }
   get img(){
     return this.form.get("img");
-  }
+ }
 
 }

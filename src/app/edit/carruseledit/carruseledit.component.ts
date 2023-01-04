@@ -1,0 +1,71 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Carrusel } from 'src/app/model/carrusel';
+import { CarruselService } from 'src/app/servicios/carrusel.service';
+import { SkillService } from 'src/app/servicios/skill.service';
+
+@Component({
+  selector: 'app-carruseledit',
+  templateUrl: './carruseledit.component.html',
+  styleUrls: ['./carruseledit.component.css']
+})
+export class CarruseleditComponent implements OnInit {
+  form: FormGroup;
+  carru:Carrusel=null
+
+  constructor(private formBuilder: FormBuilder,
+              private carruselS:CarruselService,
+              private activatedRoute: ActivatedRoute,
+              private router:Router) { 
+                this.form= this.formBuilder.group({
+                  id:[''],
+                  nombre:[''],
+                  url:['']
+                })
+              }
+
+  ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.carruselS.detail(id).subscribe(data=>{
+      this.carru=data;
+    } )
+  }
+
+  cargarCarrusel():void{
+    this.carruselS.detail(1).subscribe(data=>{
+      this.carru=data
+    })
+  }
+
+  onUpdate():void{
+    this.carruselS.update(this.form.value).subscribe(data=>{
+      alert("Persona modificada.");
+      this.router.navigate(['']);
+    } )
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if(this.form.valid){
+    
+      this.onUpdate();
+    }else{
+      alert("Fallo en la carga.");
+      this.form.markAllAsTouched();
+    }
+  }
+
+  get Id(){
+    return this.form.get("id");
+  }
+
+  get nombre(){
+    return this.form.get("nombre");
+  }
+
+  get url(){
+    return this.form.get("url");
+  }
+
+}

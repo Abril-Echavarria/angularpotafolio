@@ -28,7 +28,7 @@ export class CarruselService {
     return this.httpClient.delete<any>(this.url + `borrar/${id}`);
   }
   public detail(id: number): Observable<Carrusel>{
-    return this.httpClient.get<Carrusel>(this.url +  `detail/${id}`);
+    return this.httpClient.get<Carrusel>(this.url +  `ver/${id}`);
   }
 
 }

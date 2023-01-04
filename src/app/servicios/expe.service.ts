@@ -16,7 +16,7 @@ export class ExpeService {
   }
 
   public detail(id: number): Observable<Expe>{
-    return this.httpClient.get<Expe>(this.url +  `detail/${id}`);
+    return this.httpClient.get<Expe>(this.url +  `ver/${id}`);
   }
  
 
