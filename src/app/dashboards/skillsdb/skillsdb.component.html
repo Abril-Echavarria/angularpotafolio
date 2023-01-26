@@ -1,111 +1,29 @@
-<div>
-                      
-    <div class="input-group mb-3">
-     <form [formGroup]="form" (ngSubmit)="onEnviar($event)" >
-
+<div>                
+  <div class="input-group mb-3">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)" >
       <div class="row">
-          <div>
-              <h1 class="titulos">Hard y soft skills</h1>
-          </div>
-     
-     <!--Cambiar ID
-        
-         <h5 class="descripcion" >ID</h5>
-          <div class="col-md-10">
-                           
-          <div class="mb-4">
-           <input class="form-control" type="text" aria-label="default input example" placeholder="Completar sólo en caso de querer editar" formControlName="id" [(ngModel)]="id">
-          </div>
-          </div>-->
-  
-            <!--Cambiar nombre-->
-            <h5 class="descripcion" >Nombre</h5>
-            <div class="col-md-10">
-              
-              <div class="mb-4">
-                  <input class="form-control" type="text" aria-label="default input example" formControlName="nombre" [(ngModel)]="nombre">
-              </div>
-            </div>
-  
-  
-  <h5 class="descripcion" >Porcentaje</h5>
+        <div><h1 class="titulos">Hard y soft skills</h1></div>
+        <!--Cambiar nombre-->
+        <h5 class="descripcion" >Nombre</h5>
         <div class="col-md-10">
-          
           <div class="mb-4">
-              <input class="form-control" type="number" min="1" max="100" aria-label="default input example" formControlName="numero" [(ngModel)]="numero" >
+            <input class="form-control" type="text" aria-label="default input example" formControlName="nombre" [(ngModel)]="nombre">
           </div>
         </div>
-
+        <!--Cambiar porcentaje-->
+        <h5 class="descripcion" >Porcentaje</h5>
+        <div class="col-md-10">
+          <div class="mb-4">
+            <input class="form-control" type="number" min="1" max="100" aria-label="default input example" formControlName="numero" [(ngModel)]="numero" >
+          </div>
+        </div>
+        <!--Boton de crear-->
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
           <button type="button" class="btn btn-success"(click)="onCreate()" >Crear</button>
         </div>
-        
-
-     
-        <!--Skill N˚2
-         <h5 class="descripcion" >Skill N˚2</h5>
-        <div class="col-md-10">
-          
-          <div class="mb-3">
-              <input class="form-control" type="number" min="1" max="100" aria-label="default input example">
-          </div>
-        </div>
-         <div class="col-md-1">
-          <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-
-       <!--Skill N˚3--
-         <h5 class="descripcion" >Skill N˚3</h5>
-        <div class="col-md-10">
-          
-          <div class="mb-3">
-              <input class="form-control" type="number" min="1" max="100" aria-label="default input example">
-          </div>
-        </div>
-         <div class="col-md-1">
-          <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-
-         <!--Skill N˚4--
-         <h5 class="descripcion" >Skill N˚4</h5>
-        <div class="col-md-10">
-          
-          <div class="mb-3">
-              <input class="form-control" type="number" min="1" max="100" aria-label="default input example">
-          </div>
-        </div>
-         <div class="col-md-1">
-          <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-
-         <!--Skill N˚5--
-         <h5 class="descripcion" >Skill N˚5</h5>
-        <div class="col-md-10">
-          
-          <div class="mb-3">
-              <input class="form-control" type="number" min="1" max="100" aria-label="default input example">
-          </div>
-        </div>
-         <div class="col-md-1">
-          <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-
-
-         <!--Skill N˚6
-         <h5 class="descripcion" >Skill N˚6</h5>
-        <div class="col-md-10">
-          
-          <div class="mb-3">
-              <input class="form-control" type="number" min="1" max="100" aria-label="default input example">
-          </div>
-        </div>
-         <div class="col-md-1">
-          <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
--->
       </div>
     </form>
-
+    <!--Botones para eliminar y editar-->
     <div class="container text-centre A" *ngFor="let skill of skill">
       <div class="row">
         <div class="col-6">
@@ -117,7 +35,6 @@
        </div>
       </div>
     </div>
-    </div>
-        
-  </div>
+  </div> 
+</div>
 

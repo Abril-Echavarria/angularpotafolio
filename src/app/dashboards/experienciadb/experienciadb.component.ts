@@ -41,7 +41,7 @@ export class ExperienciadbComponent implements OnInit {
     this.cargarExpe();
     
   }
-
+//Crear una experiencia
   onCreate(): void{
     const expe = new Expe(this.titulo, this.descripcion, this.fechai, this.fechaf, this.img);
     this.expeService.create(expe).subscribe(data=>{
@@ -49,20 +49,22 @@ export class ExperienciadbComponent implements OnInit {
       window.location.reload();
   });
   }
-
+//Limpiar la pagina
   limpiar(): void{
     this.form.reset();
   }
+//Borrar una experiencia
   delete(id:number){
     this.expeService.delete(id).subscribe(data=>{
       alert("se pudo eliminar satisfactoriamente")
       this.cargarExpe();
     }  )
   }
-
+//Ver todas las experiencia
   cargarExpe():void{
     this.expeService.list().subscribe(data => {this.experiencias=data});
   }
+//Get de todos los datos que puede contener una experiencia
   get Titulo(){
     return this.form.get("titulo");
   }
@@ -95,7 +97,7 @@ export class ExperienciadbComponent implements OnInit {
     return this.Img?.touched && !this.Img?.valid;
   }
 
-
+//Crear una experiencia
   onEnviar(event:Event){
     event.preventDefault;
     if (this.form.valid){
@@ -105,5 +107,4 @@ export class ExperienciadbComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-
 }

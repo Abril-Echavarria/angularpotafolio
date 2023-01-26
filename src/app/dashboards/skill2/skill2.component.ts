@@ -27,28 +27,29 @@ export class Skill2Component implements OnInit {
   ngOnInit(): void {
     this.cargarCarrusel();
   }
-
+//Subir una nueva imagen
   onCreate(): void{
     const carrusel= new Carrusel(this.nombre, this.url);
     this.carruselS.create(carrusel).subscribe(data=>{alert("Carrusel añadido")
     window.location.reload();  
   } )
   }
+  //Limpiar la pagina
   limpiar(): void{
     this.form.reset();
   }
-
+//Eliminar una imagen
   delete(id: number): void{
     this.carruselS.delete(id).subscribe(data=>{
       alert("se pudo eliminar satisfactoriamente")
       this.cargarCarrusel();
     } )
   }
-
+//Ver todas las imagenes
   cargarCarrusel():void{
     this.carruselS.list().subscribe(data => {this.carrusel=data});
   }
-
+//Subir una nueva imagen
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
@@ -57,6 +58,13 @@ export class Skill2Component implements OnInit {
       alert("Fallo en la carga.");
       this.form.markAllAsTouched();
     }
+  }
+  //Get de todos los datos que puede contener una imagen
+  get Nombre(){
+    return this.form.get("nombre");
+  }
+  get Url(){
+    return this.form.get("url");
   }
 
 }

@@ -1,61 +1,35 @@
 <div class="input-group mb-3" >
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)" >
-        <div class="row">
-            <div>
-                <h1 class="titulos">Carrusel</h1>
-            </div>
-           <!--Cambiar ID
-           <h5 class="descripcion" >ID</h5>
-           <div class="col-md-10">
-                  
-             <div class="mb-4">
-               <input class="form-control" type="text" aria-label="default input example" placeholder="Completar sólo en caso de querer editar" formControlName="id" [(ngModel)]="id">
-           </div>
-           </div>-->
-          <!--Subir las fotos, about-->
-                    <!--Subir las fotos, about-->
-                    <h5 class="descripcion" >Imagen (Seleccionar)</h5>
-                    <div class="col-md-10">
-                      
-                      <div class="input-group">
-                          <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                          <input type="file" class="form-control" id="inputGroupFile01" formControlName="url" [(ngModel)]="url">
-                      </div>
-                    </div>
-          <!--Cambiar nombre-->
+      <div class="row">
+          <div><h1 class="titulos">Carrusel</h1></div>
+          <!--Cambiar foto-->
           <h5 class="descripcion" >Imagen (URL)</h5>
           <div class="col-md-10">
-            
             <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" formControlName="url" [(ngModel)]="url">
+              <input class="form-control" type="text" aria-label="default input example" formControlName="url" [(ngModel)]="url">
             </div>
           </div>
           <!--Cambiar nombre-->
           <h5 class="descripcion" >Nombre</h5>
           <div class="col-md-10">
-            
             <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" formControlName="nombre" [(ngModel)]="nombre">
+              <input class="form-control" type="text" aria-label="default input example" formControlName="nombre" [(ngModel)]="nombre">
             </div>
           </div>
-
+          <!--Boton de crear-->
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-success"(click)="onCreate()" >Crear</button>
           </div>
-
-        </div>
+      </div>
     </form>
-
+    <!--Botones para eliminar y editar-->
     <div class="container text-centre A" *ngFor="let img of carrusel">
         <div class="row">
-          <div class="col-6">
-            <h1>{{img.nombre}}</h1>
-          </div>
+          <div class="col-6"><h1>{{img.nombre}}</h1></div>
           <div class="col-6">
             <button type="button" class="btn btn-danger" (click)="delete(img.id)" >Borrar</button>
             <button type="button" class="btn btn-warning" routerLink="carrusel/{{img.id}} ">Editar</button>
-         </div>
+          </div>
         </div>
-      </div>
-
+    </div>
 </div>

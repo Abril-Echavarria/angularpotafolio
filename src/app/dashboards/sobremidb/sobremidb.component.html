@@ -1,127 +1,53 @@
-<div >
-  
-      <!---->               
-    <div class="input-group mb-3">
-
-        <div class="row" *ngFor="let perso of personas" >
-            <div>
-                <h1 class="titulos">Sobre mi</h1>
-            </div>
-
-           <!--Cambiar ID
-           <h5 class="descripcion" >ID</h5>
-           <div class="col-md-10">
-                  
-             <div class="mb-4">
-               <input class="form-control" type="text" aria-label="default input example" value="{{perso.id}} " disabled>
-           </div>
-           </div>-->
-
-          <!--Subir las fotos, about-->
-          <h5 class="descripcion" >Foto de la institución</h5>
-          <div class="col-md-10">
-            
-            <div class="input-group">
-                <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                <input type="file" class="form-control" id="inputGroupFile01"disabled >
-            </div>
-          </div>
-
-                    <!--Cambiar nombre-->
-                    <h5 class="descripcion" >Foto de la institución (URL)</h5>
-                    <div class="col-md-10">
-                      
-                      <div class="mb-4">
-                          <input class="form-control" type="text" aria-label="default input example" value=" {{perso.foto}} " disabled>
-                      </div>
-                    </div>
-         
-
-
-           <!--Canbiar Foto N˚2
-           <h5 class="descripcion" >Carrusel N˚2</h5>
-          <div class="col-md-10">
-            <div class="input-group">
-                <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                <input type="file" class="form-control" id="inputGroupFile01">
-            </div>
-         </div>
-           <div class="col-md-1">
-            <button type="button" class="btn btn-primary">Guardar</button>
-           </div>
-
-           <!--Canbiar Foto N˚3
-           <h5 class="descripcion" >Carrusel N˚3</h5>
-          <div class="col-md-10">
-            <div class="input-group">
-                <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                <input type="file" class="form-control" id="inputGroupFile01">
-            </div>
-         </div>
-           <div class="col-md-1">
-            <button type="button" class="btn btn-primary">Guardar</button>
-           </div>
-
-           <!--Canbiar Foto N˚4
-           <h5 class="descripcion" >Carrusel N˚4</h5>
-          <div class="col-md-10">
-            <div class="input-group">
-                <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                <input type="file" class="form-control" id="inputGroupFile01">
-            </div>
-         </div>
-           <div class="col-md-1">
-            <button type="button" class="btn btn-primary">Guardar</button>
-           </div>
-          -->
-
-          <!--Cambiar nombre-->
-          <h5 class="descripcion" >Nombre</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" value="{{perso.nombre}} " disabled>
-            </div>
-          </div>
-
-                    <!--Cambiar nombre-->
-           <h5 class="descripcion" >Apellido</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" value="{{perso.apellido}} " disabled>
-            </div>
-          </div>
-
-          <h5 class="descripcion" >Edad</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-4">
-                <input class="form-control" type="text"  aria-label="default input example" value="{{perso.edad}} "disabled >
-            </div>
-          </div>
-
-                    <!--Cambiar nombre-->
-           <h5 class="descripcion" >Sobre mi</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" value="{{perso.sobremi}} "disabled >
-            </div>
-          </div>
-
-                              <!--Cambiar nombre-->
-           <h5 class="descripcion" >Descripción</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" value="{{perso.mini}} "disabled >
-            </div>
-          </div>
-          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-warning" routerLink="persona/{{ perso.id}} " >Actualizar</button>
-          </div>
-       </div>
-     
+<div>              
+  <div class="input-group mb-3">
+    <div class="row" *ngFor="let perso of personas" >
+      <div><h1 class="titulos">Sobre mi</h1></div>
+      <!--Cambiar foto-->
+      <h5 class="descripcion" >Foto de la institución (URL)</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text" aria-label="default input example" value=" {{perso.foto}} " disabled>
         </div>
+      </div>
+      <!--Cambiar nombre-->
+      <h5 class="descripcion" >Nombre</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text" aria-label="default input example" value="{{perso.nombre}} " disabled>
+        </div>
+      </div>
+       <!--Cambiar apellido-->
+      <h5 class="descripcion" >Apellido</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text" aria-label="default input example" value="{{perso.apellido}} " disabled>
+        </div>
+      </div>
+      <!--Cambiar edad-->
+      <h5 class="descripcion" >Edad</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text"  aria-label="default input example" value="{{perso.edad}} "disabled >
+        </div>
+      </div>
+      <!--Cambiar sobre mi-->
+      <h5 class="descripcion" >Sobre mí</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text" aria-label="default input example" value="{{perso.sobremi}} "disabled >
+        </div>
+      </div>
+
+      <!--Cambiar deacripción-->
+      <h5 class="descripcion" >Descripción</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text" aria-label="default input example" value="{{perso.mini}} "disabled >
+        </div>
+      </div>
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-warning" routerLink="persona/{{ perso.id}} " >Actualizar</button>
+      </div>
+    </div>  
   </div>
+</div>

@@ -26,11 +26,9 @@ export class SkillsdbComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.cargarSkill();
-
   }
-
+//Crear una skill
   onCreate(): void{
     const skill= new Skill(this.nombre,this.numero);
     this.skillS.create(skill).subscribe(data=>{
@@ -38,16 +36,18 @@ export class SkillsdbComponent implements OnInit {
     window.location.reload();  
   } )
   }
+//Eliminar una skill
   delete(id: number): void{
     this.skillS.delete(id).subscribe(data=>{
       alert("se pudo eliminar satisfactoriamente")
       this.cargarSkill();
     }  ) 
   }
+  //Ver todas las skills
   cargarSkill():void{
     this.skillS.list().subscribe(data => {this.skill=data});
   }
-
+//Crear una skill
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
@@ -58,13 +58,13 @@ export class SkillsdbComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-
+//Limpiar la pagina
   limpiar(): void{
     this.form.reset();
   }
 
 
-
+//Get de todos los datos que puede contener una skill
   get Nombre(){
     return this.form.get("nombre");
   }

@@ -32,33 +32,31 @@ export class ProyectosdbComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.cargarProyecto();
-
   }
-
+//Crear un nuevo proyecto
   onCreate(): void{
     const proyecto= new Proyecto(this.titulo, this.descripcion, this.fechai, this.fechaf, this.img);
     this.proyectoS.create(proyecto).subscribe(data=>{alert("Proyecto añadido")
     window.location.reload();
-  } )
+  })
   }
-
+//Limpiar la pagina
   limpiar(): void{
     this.form.reset();
   }
-
+//Eliminar un proyecto
   delete(id: number): void{
     this.proyectoS.delete(id).subscribe(data=>{
       this.cargarProyecto();
       alert("se pudo eliminar satisfactoriamente")
     } )
   }
-
+//Ver los proyectos
   cargarProyecto():void{
     this.proyectoS.list().subscribe(data => {this.proyectos=data});
   }
-
+//crear un proyecto
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
@@ -68,9 +66,7 @@ export class ProyectosdbComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-
-
-
+//Get de todos los datos que puede contener un proyecto
   get Titulo(){
     return this.form.get("titulo");
   }
@@ -110,7 +106,4 @@ export class ProyectosdbComponent implements OnInit {
   get imgValid(){
     return this.Img?.touched && !this.Img?.valid;
   }
-
-
-
 }
