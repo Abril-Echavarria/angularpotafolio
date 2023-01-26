@@ -1,0 +1,40 @@
+
+<div class="pag">
+<div class="card border-dark  mb-3" style="max-width: 48rem;">
+<form [formGroup]="form"  class="m-5" (ngSubmit)="onEnviar($event)" >
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      [ngClass]="{'is-invalid': Email.errors && Email?.touched,'is-valid':!Email?.errors && Email?.touched}" 
+      >
+      <div id="emailHelp" class="form-text"></div>
+
+      <div *ngIf="Email.errors && Email.touched">
+        <p *ngIf="Email.hasError('required')" class="text-danger">
+            Ingrese su email!!!!!
+        </p>
+        <p *ngIf="Email.hasError('email')" class="text-dangert">
+            Ingrese un email valido!!!
+        </p>
+   </div>
+
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input type="password" formControlName="clave" class="form-control" id="exampleInputPassword1"
+      [ngClass]="{'is-invalid': Clave.errors && Clave?.touched,'is-valid':!Clave?.errors && Clave?.touched}" >
+    </div>
+
+    <div *ngIf="Clave.errors && Clave.touched">
+        <p *ngIf="Clave.hasError('required')" class="text-danger">
+            La contraseña es requerida!!!
+        </p>
+        <p *ngIf="Clave?.errors?.['minlength']" class="text-danger">
+            La contraseña debe tener al menos 8 caracteres!!!
+        </p>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+  </form>
+</div>
+</div>

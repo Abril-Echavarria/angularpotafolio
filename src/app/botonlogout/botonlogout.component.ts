@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PersonaService } from '../servicios/persona.service';
 
 @Component({
   selector: 'app-botonlogout',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonlogoutComponent implements OnInit {
 
-  constructor() { }
+  persona: any;
 
-  ngOnInit(): void {
+  constructor(private ruta: Router ,private personaService: PersonaService) {
+
+   }
+
+  ngOnInit(): void {    
+
   }
+
+
 
 }

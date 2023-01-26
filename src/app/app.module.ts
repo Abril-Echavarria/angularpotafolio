@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 const routes: Routes =[
@@ -51,6 +51,11 @@ import { EstudioeditComponent } from './edit/estudioedit/estudioedit.component';
 import { ExpeeditComponent } from './edit/expeedit/expeedit.component';
 import { ProyeceditComponent } from './edit/proyecedit/proyecedit.component';
 import { SkilleditComponent } from './edit/skilledit/skilledit.component';
+import { PersonaService } from './servicios/persona.service';
+import { InterceptorService } from './servicios/interceptor.service';
+import { PanelloginComponent } from './panellogin/panellogin.component';
+import { BotondashComponent } from './botondash/botondash.component';
+import { BotonindexComponent } from './botonindex/botonindex.component';
 
 @NgModule({
   declarations: [
@@ -85,16 +90,19 @@ import { SkilleditComponent } from './edit/skilledit/skilledit.component';
     EstudioeditComponent,
     ExpeeditComponent,
     ProyeceditComponent,
-    SkilleditComponent
+    SkilleditComponent,
+    PanelloginComponent,
+    BotondashComponent,
+    BotonindexComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    FormsModule
   ],
-  providers: [],
+  providers: [PersonaService,{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

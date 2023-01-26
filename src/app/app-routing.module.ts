@@ -8,19 +8,22 @@ import { ExpeeditComponent } from './edit/expeedit/expeedit.component';
 import { ProyeceditComponent } from './edit/proyecedit/proyecedit.component';
 import { SkilleditComponent } from './edit/skilledit/skilledit.component';
 import { ErrorComponent } from './error/error.component';
+import { PanelloginComponent } from './panellogin/panellogin.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { GuardGuard } from './servicios/guard.guard';
 
 
 const routes: Routes = [
   {path:"principal", component:PrincipalComponent},
-  {path:"dashboard", component:DashboardComponent},
+  {path:"dashboard", component:DashboardComponent, canActivate:[GuardGuard]},
   {path:"", redirectTo:"/principal", pathMatch:"full"},
-   {path:"dashboard/persona/:id", component:EditarComponent},
-   {path:"dashboard/carrusel/:id", component:CarruseleditComponent},
-   {path:"dashboard/estudio/:id", component:EstudioeditComponent},
-   {path:"dashboard/experiencia/:id", component:ExpeeditComponent},
-   {path:"dashboard/proyecto/:id", component:ProyeceditComponent},
-   {path:"dashboard/skill/:id", component:SkilleditComponent},
+  {path:"login", component:PanelloginComponent},
+   {path:"dashboard/persona/:id", component:EditarComponent,canActivate:[GuardGuard]},
+   {path:"dashboard/carrusel/:id", component:CarruseleditComponent, canActivate:[GuardGuard]},
+   {path:"dashboard/estudio/:id", component:EstudioeditComponent, canActivate:[GuardGuard]},
+   {path:"dashboard/experiencia/:id", component:ExpeeditComponent, canActivate:[GuardGuard]},
+   {path:"dashboard/proyecto/:id", component:ProyeceditComponent, canActivate:[GuardGuard]},
+   {path:"dashboard/skill/:id", component:SkilleditComponent, canActivate:[GuardGuard]},
   {path:"**", component:ErrorComponent}
  
 ];

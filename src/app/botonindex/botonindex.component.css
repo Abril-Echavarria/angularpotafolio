@@ -1,13 +1,13 @@
-.fa-sharp.fa-solid.fa-user-secret.fa-2xl:hover{
-    color: #d60000;
+.fa-eye.fa-solid.fa-2xl:hover{
+    color: #fbff00;
 }
 
 .fa-sharp.fa-solid.fa-user.fa-2xl{
-    color: #000000;
+    color: #ffffff;
 }
 
 .list-group-item{
-    margin-left: -90%;
+    margin-left: -60%;
 }
 
 .list-group-item{

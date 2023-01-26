@@ -73,6 +73,23 @@
           </div>
         </div>
 
+        <h5 class="descripcion" >Email</h5>
+        <div class="col-md-10">
+          
+          <div class="mb-4">
+              <input class="form-control" type="text" aria-label="default input example" formControlName="email" [ngModel]="perso.email">
+          </div>
+        </div>
+
+        <h5 class="descripcion" >Contraseña</h5>
+        <div class="col-md-10">
+          
+          <div class="mb-4">
+              <input class="form-control" type="text" aria-label="default input example" formControlName="clave" [ngModel]="perso.clave">
+          </div>
+        </div>
+
+
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
           <button type="button" class="btn btn-info"(click)="onUpdate()" >Guardar</button>
         </div>

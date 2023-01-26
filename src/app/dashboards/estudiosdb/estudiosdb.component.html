@@ -1,81 +1,37 @@
-<div>
-                      
+<div>                 
   <div class="input-group mb-3">
-
-  <form [formGroup]="form" (ngSubmit)="onEnviar($event)" >
-        <div class="row" >
-            <div>
-                <h1 class="titulos">Estudios</h1>
-            </div>
-
-           <!--Cambiar ID
-           <h5 class="descripcion" >ID</h5>
-           <div class="col-md-10">
-                  
-             <div class="mb-4">
-               <input class="form-control" type="text" aria-label="default input example" placeholder="Completar sólo en caso de querer editar" formControlName="id" [(ngModel)]="id">
-           </div>
-           </div>-->
-
-          <!--Subir las fotos, about-->
-                    <!--Subir las fotos, about-->
-                    <h5 class="descripcion" >Foto de la institución (Seleccionar)</h5>
-                    <div class="col-md-10">
-                      
-                      <div class="input-group">
-                          <label class="input-group-text" for="inputGroupFile01">Upload</label>
-                          <input type="file" class="form-control" id="inputGroupFile01" formControlName="img" [(ngModel)]="img">
-                      </div>
-                    </div>
-          <!--Cambiar nombre-->
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)" >
+      <div class="row" >
+        <div><h1 class="titulos">Estudios</h1></div>
+          <!--Subir las fotos-->
           <h5 class="descripcion" >Foto de la institución (URL)</h5>
           <div class="col-md-10">
-            
             <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" formControlName="img" [(ngModel)]="img">
+              <input class="form-control" type="text" aria-label="default input example" formControlName="img" [(ngModel)]="img">
             </div>
           </div>
-
-         
-
-
-
           <!--Cambiar nombre-->
-           <h5 class="descripcion" >Nombre</h5>
+          <h5 class="descripcion" >Nombre</h5>
           <div class="col-md-10">
-            
             <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" formControlName="titulo" [(ngModel)]="titulo">
+              <input class="form-control" type="text" aria-label="default input example" formControlName="titulo" [(ngModel)]="titulo">
             </div>
           </div>
-          <!--
-          <div class="col-md-1">
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-              <button type="button" class="btn btn-danger">Eliminar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
-           </div>-->
-
           <!--Cambiar descripcion-->
-          
-           <h5 class="descripcion" >Descripción</h5>
+          <h5 class="descripcion" >Descripción</h5>
           <div class="col-md-10">
-            
             <div class="mb-3">
-                <input class="form-control" type="text" aria-label=" input example" formControlName="descripcion" [(ngModel)]="descripcion" >
-
+              <input class="form-control" type="text" aria-label=" input example" formControlName="descripcion" [(ngModel)]="descripcion" >
             </div>
           </div>
-
+          <!--Cambiar fecha de inicio-->
           <h5 class="descripcion" >Fecha de inicio</h5>
           <div class="col-md-10">
-            
             <div class="mb-3">
                 <input class="form-control" type="date" aria-label=" input example" formControlName="fechai" [(ngModel)]="fechai" >
-
             </div>
           </div>
-
+          <!--Cambiar fecha de fin-->
           <h5 class="descripcion" >Fecha de fin</h5>
           <div class="col-md-10">
             
@@ -84,106 +40,23 @@
 
             </div>
           </div>
-
-          
-      
           <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-success"(click)="onCreate()" >Crear</button>
           </div>
-
-          
-
-          
-          <!--
-          <div class="col-md-1">
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-              <button type="button" class="btn btn-danger">Eliminar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
-           </div>-->
-
-         <!--Fecha
-           <h5 class="descripcion" >Fecha</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-3">
-                <input class="form-control" type="text" aria-label="default input example">
-            </div>
-          </div>-->
-
-          <!--
-          <div class="col-md-1">
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-              <button type="button" class="btn btn-danger">Eliminar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
-           </div>
-
-        </div>-->
-<!--
-       <div class="row">
-        <div>
-            <h1 class="titulos">Certificado N˚2</h1>
-        </div>
-      <!--Subir las fotos, about
-        <h5 class="descripcion" >Foto de la institución</h5>
-      <div class="col-md-10">
-        
-        <div class="input-group">
-            <label class="input-group-text" for="inputGroupFile01">Upload</label>
-            <input type="file" class="form-control" id="inputGroupFile01">
-        </div>
-     </div>
-       <div class="col-md-1">
-        <button type="button" class="btn btn-primary">Guardar</button>
-       </div>
-     
-
-      <!--Cambiar nombre
-       <h5 class="descripcion" >Nombre</h5>
-      <div class="col-md-10">
-        
-        <div class="mb-3">
-            <input class="form-control" type="text" aria-label="default input example">
+      </div>
+    </form>
+    <div class="container text-centre A" *ngFor="let estudio of estudios">
+      <div class="row">
+        <div class="col-6"><h1>{{estudio.titulo}}</h1></div>
+        <div class="col-6">
+          <button type="button" class="btn btn-danger" (click)="delete(estudio.id)" >Borrar</button>
+          <button type="button" class="btn btn-warning" routerLink="estudio/{{estudio.id}} " >Editar</button>
         </div>
       </div>
-       <div class="col-md-1">
-        <button type="button" class="btn btn-primary">Guardar</button>
-       </div>
-
-      <!--Cambiar descripcion
-       <h5 class="descripcion" >Descripción</h5>
-      <div class="col-md-10">
-        
-        <div class="mb-3">
-            <input class="form-control" type="text" aria-label="default input example">
-        </div>
-      </div>
-       <div class="col-md-1">
-        <button type="button" class="btn btn-primary">Guardar</button>
-       </div>-->
-
-  
-    </div>
-  </form>
-  <div class="container text-centre A" *ngFor="let estudio of estudios">
-    <div class="row">
-      <div class="col-6">
-        <h1>{{estudio.titulo}}</h1>
-      </div>
-      <div class="col-6">
-        <button type="button" class="btn btn-danger" (click)="delete(estudio.id)" >Borrar</button>
-        <button type="button" class="btn btn-warning" routerLink="estudio/{{estudio.id}} " >Editar</button>
-     </div>
     </div>
   </div>
-
-  </div>
-
-  
-
 </div>
 
-  <!--<form [formGroup]="form" (ngSubmit)="delete()" >-->
+  
 
 

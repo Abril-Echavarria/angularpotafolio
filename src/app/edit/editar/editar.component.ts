@@ -25,7 +25,9 @@ export class EditarComponent implements OnInit {
                   edad: [''],
                   sobremi:[''],
                   mini:[''],
-                  foto:['']
+                  foto:[''],
+                  email:[''],
+                  clave:['']
             
                 })
               }
@@ -85,5 +87,13 @@ export class EditarComponent implements OnInit {
   get img(){
     return this.form.get("img");
  }
+
+ get email(){
+  return this.form.get("email");
+}
+
+get clave(){
+  return this.form.get("clave");
+}
 
 }

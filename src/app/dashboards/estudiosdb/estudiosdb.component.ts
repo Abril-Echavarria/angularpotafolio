@@ -33,27 +33,29 @@ export class EstudiosdbComponent implements OnInit {
   ngOnInit(): void {
     this.cargarEstudio();
   }
-
+//Crear un nuevo estudio
   onCreate(): void{
     const estudio= new Estudio(this.titulo,this.descripcion, this.fechai, this.fechaf, this.img);
     this.estudioService.create(estudio).subscribe(data=>{alert("Estudio añadido")
     window.location.reload();  
-  } )
+  })
   }
+//Limpiar la pagina
   limpiar(): void{
     this.form.reset();
   }
+//Eliminar un estudio
   delete(id: number): void{
     this.estudioService.delete(id).subscribe(data=>{
       alert("se pudo eliminar satisfactoriamente")
       this.cargarEstudio();
-    } )
+    })
   }
-
+//Ver todos los estudios
   cargarEstudio():void{
     this.estudioService.list().subscribe(data => {this.estudios=data});
   }
-
+//Crear un nuevo estudio
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
@@ -63,9 +65,7 @@ export class EstudiosdbComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-
-
-
+//Get de todos los datos que puede contener un estudio
   get Titulo(){
     return this.form.get("titulo");
   }

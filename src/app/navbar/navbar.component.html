@@ -2,11 +2,16 @@
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" >
-            <img src="assets/IMG/APLogo-20-20.png" width="15%"></a>
-            
- 
-   </div>
-
-   <app-redes></app-redes> <app-botonlogin></app-botonlogin>
-<app-login> </app-login>
+            <img src="https://i.ibb.co/GssGwmC/APLogo-20-20.png" width="15%">
+        </a>
+    </div>
+        <!--REDES-->
+   <app-redes></app-redes>
+        <!--LOGIN-->
+   <app-botonlogin *ngIf="!usuarioAuth"></app-botonlogin>
+        <!--LOGOUT/BOTON PARA EL DASHBOARD/BOTON PARA EL INDEX-->
+   <ul class="list-group list-group-horizontal"></ul>
+   <app-botonlogout  *ngIf="usuarioAuth"  (click)="closeSession()"></app-botonlogout>
+   <app-botondash  *ngIf="usuarioAuth" ></app-botondash>
+   <app-botonindex  *ngIf="usuarioAuth" ></app-botonindex>
 </nav>

@@ -7,23 +7,53 @@
  <h5 class="modal-title" id="exampleModalLabel">Login</h5>
  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
+
+<form [formGroup]="form" name="loginform" (ngSubmit)="onEnviar($event)">
+
 <div class="modal-body">
    <div class="mb-3 row">
        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
        <div class="col-sm-10">
-         <input type="text"  class="form-control" id="staticEmail" value="email@ejemplo.com">
+
+         <input type="email" pattern="[^ @]*@[^ @]*" formControlName="email" class="form-control"
+         [(ngModel)]="persona.email"
+         [ngClass]="{'is-invalid': Email.errors && Email.touched, 'is-valid': !Email.errors && Email.touched}"
+          id="staticEmail" placeholder="email@ejemplo.com">
+
+          <div *ngIf="Email.errors && Email.touched">
+            <p *ngIf="Email.hasError('required')" class="text-dark">
+                Ingrese su email!!!!!
+            </p>
+            <p *ngIf="Email.hasError('email')" class="text-dark">
+                Ingrese un email valido!!!
+            </p>
        </div>
      </div>
      <div class="mb-3 row">
        <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
        <div class="col-sm-10">
-         <input type="password" class="form-control" id="inputPassword">
+
+         <input type="password" formControlName="clave" class="form-control" 
+         [(ngModel)]="persona.clave"
+         [ngClass]="{'is-invalid': Clave.errors && Clave.touched, 'is-valid': !Clave.errors && Clave.touched}"
+         id="clave">
+
+         <div *ngIf="Clave.errors && Clave.touched">
+          <p *ngIf="Clave.hasError('required')" class="text-dark">
+              La contraseña es requerida!!!
+          </p>
+          <p *ngIf="Clave.hasError('minLength(8)')" class="text-dark">
+              La contraseña debe tener al menos caracteres!!!
+          </p>
+      </div>
        </div>
      </div>
 </div>
 <div class="modal-footer">
  <button type="button" class="btn btn-primary">Iniciar sesión</button>
 </div>
+
 </div>
+</form>
     </div>
 </div>

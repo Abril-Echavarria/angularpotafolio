@@ -1,8 +1,5 @@
-.fa-sharp.fa-solid.fa-user-secret.fa-2xl:hover{
-    color: #d60000;
-}
 
-.fa-sharp.fa-solid.fa-user.fa-2xl:hover{
+.fa-user-slash.fa-solid.fa-2xl:hover{
     color: #ff0000;
 }
 .fa-sharp.fa-solid.fa-user.fa-2xl{
@@ -10,14 +7,11 @@
 }
 
 .list-group-item{
-   
-    margin-left: -60%;
+    margin-left: -130%;
 }
 
 .list-group-item{
-
     background-color: transparent;
     color: #ffffff;
     border-color: transparent;
-
 }
