@@ -33,24 +33,24 @@ export class ProyeceditComponent implements OnInit {
       this.proyec=data;
     } )
   }
-
+//Guardar
   onUpdate():void{
     this.proyectoS.update(this.form.value).subscribe(data=>{
-      alert("Estudio modificado.");
+      alert("Proyecto modificado.");
       this.router.navigate(['']);
     } )
   }
-
+//Guardar los cambios
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
-    
       this.onUpdate();
     }else{
       alert("Fallo en la carga.");
       this.form.markAllAsTouched();
     }
   }
+//Get de los datos que contienen las experiencias
   get Id(){
     return this.form.get("id");
   }

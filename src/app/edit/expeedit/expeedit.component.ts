@@ -33,14 +33,14 @@ export class ExpeeditComponent implements OnInit {
       this.expe=data;
     } )
   }
-
+//Guardar
   onUpdate():void{
     this.expeService.update(this.form.value).subscribe(data=>{
-      alert("Estudio modificado.");
+      alert("Experiencia modificado.");
       this.router.navigate(['']);
     } )
   }
-
+//Guardar los cambios
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
@@ -51,7 +51,7 @@ export class ExpeeditComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-
+//Get de los datos que contienen las experiencias
   get Id(){
     return this.form.get("id");
   }

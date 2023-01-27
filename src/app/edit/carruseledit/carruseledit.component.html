@@ -1,52 +1,32 @@
 <div class="input-group">
-    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-        <div class="row" >
-        <div>
-            <h1 class="titulos">Carrusel</h1>
-        </div>
-       <!--Cambiar ID-->
-       <h5 class="descripcion" >ID</h5>
-         <div class="col-md-10">
-                                  
-         <div class="mb-4">
-           <input class="form-control form-control-lg" type="text" aria-label="default input example"   formControlName="id" [ngModel]="carru.id" >
-         </div>
-         </div>
-
-                             <!--Subir las fotos, about-->
-        <h5 class="descripcion" >Foto</h5>
-        <div class="col-md-10">
-                               
-        <div class="input-group">
-            <label class="input-group-text" for="inputGroupFile01">Upload</label>
-            <input type="file" class="form-control" id="inputGroupFile01" formControlName="url" [ngModel]="carru.url">
-         </div>
-         </div>
-
- <!--Cambiar nombre-->
- <h5 class="descripcion" >Foto (URL)</h5>
- <div class="col-md-10">
-   
-   <div class="mb-4">
-       <input class="form-control" type="text" aria-label="default input example" formControlName="url" [ngModel]="carru.url">
-   </div>
- </div>
-         
-                    <!--Cambiar nombre-->
-     <h5 class="descripcion" >Nombre</h5>
-     <div class="col-md-10">
-                      
+  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <div class="row" >
+      <div><h1 class="titulos">Carrusel</h1></div>
+      <!--ID-->
+      <h5 class="descripcion" >ID</h5>
+      <div class="col-md-10">
+          <div class="mb-4">
+            <input class="form-control form-control-lg" type="text" aria-label="default input example"   formControlName="id" [ngModel]="carru.id" >
+          </div>
+      </div>
+      <!--Cambiar foto-->
+      <h5 class="descripcion" >Foto (URL)</h5>
+      <div class="col-md-10">
+          <div class="mb-4">
+            <input class="form-control" type="text" aria-label="default input example" formControlName="url" [ngModel]="carru.url">
+          </div>
+      </div>
+      <!--Cambiar nombre-->
+      <h5 class="descripcion" >Nombre</h5>
+      <div class="col-md-10">
           <div class="mb-4">
             <input class="form-control" type="text" aria-label="default input example" formControlName="nombre" [ngModel]="carru.nombre">
-         </div>
-         </div>
-
-         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-info"(click)="onUpdate()" >Guardar</button>
           </div>
-
-
-        </div>
-
-    </form>
+      </div>
+      <!--Boton para guardar los cambios-->
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-info"(click)="onUpdate()" >Guardar</button>
+      </div>
+    </div>
+  </form>
 </div>

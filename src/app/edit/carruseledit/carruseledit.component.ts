@@ -31,31 +31,30 @@ export class CarruseleditComponent implements OnInit {
       this.carru=data;
     } )
   }
-
+//Ver los datos de una imagen
   cargarCarrusel():void{
     this.carruselS.detail(1).subscribe(data=>{
       this.carru=data
     })
   }
-
+//Guardar
   onUpdate():void{
     this.carruselS.update(this.form.value).subscribe(data=>{
-      alert("Persona modificada.");
+      alert("Carrusel modificada.");
       this.router.navigate(['']);
     } )
   }
-
+//Guardar cambios
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
-    
       this.onUpdate();
     }else{
       alert("Fallo en la carga.");
       this.form.markAllAsTouched();
     }
   }
-
+//Get de todos los datos que contienen las imagenes
   get Id(){
     return this.form.get("id");
   }

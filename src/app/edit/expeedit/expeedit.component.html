@@ -1,77 +1,54 @@
 <div class="input-group">
-    <form  [formGroup]="form" (ngSubmit)="onEnviar($event)" >
-        <div class="row">
-            <div>
-                <h1 class="titulos">Estudio</h1>
-            </div>
-       <!--Cambiar ID-->
-       <h5 class="descripcion" >ID</h5>
-         <div class="col-md-10">
-                                  
-         <div class="mb-4">
-           <input class="form-control form-control-lg" type="text" aria-label="default input example"   formControlName="id" [ngModel]="expe.id" >
-         </div>
-         </div>
-         <h5 class="descripcion" >Foto</h5>
-         <div class="col-md-10">
-                                
-         <div class="input-group">
-             <label class="input-group-text" for="inputGroupFile01">Upload</label>
-             <input type="file" class="form-control" id="inputGroupFile01" formControlName="img" [ngModel]="expe.img">
-          </div>
-          </div>
- 
-  <!--Cambiar nombre-->
-        <h5 class="descripcion" >Foto de la institución (URL)</h5>
-        <div class="col-md-10">
-    
-              <div class="mb-4">
-                 <input class="form-control" type="text" aria-label="default input example" formControlName="img" [ngModel]="expe.img">
-             </div>
-         </div>
-          <!--Cambiar nombre-->
-          <h5 class="descripcion" >Nombre</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-4">
-                <input class="form-control" type="text" aria-label="default input example" formControlName="titulo" [ngModel]="expe.titulo">
-            </div>
-          </div>
-
-          <h5 class="descripcion" >Descripción</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-3">
-                <input class="form-control" type="text" aria-label=" input example" formControlName="descripcion" [ngModel]="expe.descripcion" >
-
-            </div>
-          </div>
-
-          <h5 class="descripcion" >Fecha de inicio</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-3">
-                <input class="form-control" type="date" aria-label=" input example" formControlName="fechai" [ngModel]="expe.fechai" >
-
-            </div>
-          </div>
-
-          <h5 class="descripcion" >Fecha de fin</h5>
-          <div class="col-md-10">
-            
-            <div class="mb-3">
-                <input class="form-control" type="date" aria-label=" input example" formControlName="fechaf" [ngModel]="expe.fechaf" >
-
-            </div>
-          </div>
-
-
-          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button type="button" class="btn btn-info"(click)="onUpdate()" >Guardar</button>
-          </div>
-
-
+  <form  [formGroup]="form" (ngSubmit)="onEnviar($event)" >
+    <div class="row">
+      <div><h1 class="titulos">Estudio</h1></div>
+      <!--Cambiar ID-->
+      <h5 class="descripcion" >ID</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control form-control-lg" type="text" aria-label="default input example"   formControlName="id" [ngModel]="expe.id" >
         </div>
-    </form>
+      </div>
+      <!--Cambiar fot-->
+      <h5 class="descripcion" >Foto de la institución (URL)</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text" aria-label="default input example" formControlName="img" [ngModel]="expe.img">
+        </div>
+      </div>
+      <!--Cambiar nombre-->
+      <h5 class="descripcion" >Nombre</h5>
+      <div class="col-md-10">
+        <div class="mb-4">
+          <input class="form-control" type="text" aria-label="default input example" formControlName="titulo" [ngModel]="expe.titulo">
+        </div>
+      </div>
+      <!--Cambiar descripción-->
+      <h5 class="descripcion" >Descripción</h5>
+      <div class="col-md-10">
+        <div class="mb-3">
+          <input class="form-control" type="text" aria-label=" input example" formControlName="descripcion" [ngModel]="expe.descripcion" >
+        </div>
+      </div>
+      <!--Cambiar fecha de inicio-->
+      <h5 class="descripcion" >Fecha de inicio</h5>
+      <div class="col-md-10">
+        <div class="mb-3">
+          <input class="form-control" type="date" aria-label=" input example" formControlName="fechai" [ngModel]="expe.fechai" >
+        </div>
+      </div>
+      <!--Fecha de finalización-->
+      <h5 class="descripcion" >Fecha de finalización</h5>
+      <div class="col-md-10">
+        <div class="mb-3">
+          <input class="form-control" type="date" aria-label=" input example" formControlName="fechaf" [ngModel]="expe.fechaf" >
+        </div>
+      </div>
+      <!--Botón de guardado-->
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-info"(click)="onUpdate()" >Guardar</button>
+      </div>
+    </div>
+  </form>
 </div>
 

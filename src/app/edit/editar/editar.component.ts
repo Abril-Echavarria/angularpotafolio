@@ -38,31 +38,30 @@ export class EditarComponent implements OnInit {
       this.perso=data;
     } )
   }
-
+//Ver la persona
   cargarPersona():void{
     this.personaService.detail(1).subscribe(data=>{
       this.perso=data
     })
   }
-
+//Guardar cambios
   onUpdate():void{
     this.personaService.update(this.form.value).subscribe(data=>{
       alert("Persona modificada.");
       this.router.navigate(['']);
     } )
   }
-
+//Guardar cambios
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
-    
       this.onUpdate();
     }else{
       alert("Fallo en la carga.");
       this.form.markAllAsTouched();
     }
   }
-
+//Get de todos los datos que contiene la persona
   get Id(){
     return this.form.get("id");
   }

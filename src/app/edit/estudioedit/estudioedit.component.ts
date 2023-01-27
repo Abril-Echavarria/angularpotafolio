@@ -34,16 +34,14 @@ export class EstudioeditComponent implements OnInit {
       this.estudio=data;
     } )
   }
-
-
-
+//Guardar los cambios
   onUpdate():void{
     this.estudioService.update(this.form.value).subscribe(data=>{
       alert("Estudio modificado.");
       this.router.navigate(['']);
     } )
   }
-
+//Guardar
   onEnviar(event:Event){
     event.preventDefault;
     if(this.form.valid){
@@ -54,8 +52,7 @@ export class EstudioeditComponent implements OnInit {
       this.form.markAllAsTouched();
     }
   }
-
-
+//Get de los datos que contienen los estudios
   get Id(){
     return this.form.get("id");
   }
@@ -79,5 +76,4 @@ export class EstudioeditComponent implements OnInit {
   get Img(){
     return this.form.get("img");
   }
-
 }
