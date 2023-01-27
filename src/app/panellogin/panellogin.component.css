@@ -1,6 +1,11 @@
 .card{
-     top: 10rem;
-     left: 20rem;
+     margin-top: 10rem;
+     /*margin-left: 20rem;*/
+    height: 20rem;
+    width: 100rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
 
    background: rgb(2,0,36);
    background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(182,87,191,1) 0%, rgba(101,38,181,1) 100%);
@@ -10,6 +15,7 @@
 
 }
 .pag{
-    min-height: 78vh; 
+    min-height: 82vh; 
+    /*align-items: center;*/
 }
   
