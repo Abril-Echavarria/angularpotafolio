@@ -16,7 +16,7 @@ export class SobremiComponent implements OnInit {
   ngOnInit(): void {
     this.cargarPersona();
   }
-
+//Cargar los datos
   cargarPersona():void{
     this.personaService.list().subscribe(data =>{this.personas=data});  }
 

@@ -19,7 +19,7 @@ export class SkillsComponent implements OnInit {
     this.cargarSkill();
 
   }
-
+//Cargar las Skills
   cargarSkill():void{
     this.skillService.list().subscribe(data=>{this.skills=data} );
   }

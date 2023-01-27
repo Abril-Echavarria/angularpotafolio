@@ -19,7 +19,6 @@ const routes: Routes =[
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './modal/login/login.component';
 import { RedesComponent } from './redes/redes.component';
 import { CarouseComponent } from './carouse/carouse.component';
 import { FotoMiaComponent } from './foto.mia/foto.mia.component';
@@ -33,7 +32,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { PrincipalComponent } from './principal/principal.component';
-import { NavbardashComponent } from './navbardash/navbardash.component';
 import { BotonloginComponent } from './botonlogin/botonlogin.component';
 import { BotonlogoutComponent } from './botonlogout/botonlogout.component';
 import { SobremidbComponent } from './dashboards/sobremidb/sobremidb.component';
@@ -61,7 +59,6 @@ import { BotonindexComponent } from './botonindex/botonindex.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent,
     RedesComponent,
     CarouseComponent,
     FotoMiaComponent,
@@ -75,7 +72,6 @@ import { BotonindexComponent } from './botonindex/botonindex.component';
     ErrorComponent,
     ContactoComponent,
     PrincipalComponent,
-    NavbardashComponent,
     BotonloginComponent,
     BotonlogoutComponent,
     SobremidbComponent,

@@ -1,9 +1,6 @@
 .card{
      top: 10rem;
      left: 20rem;
-    /*bottom: 5rem;
-    border: 5666rem;
-   padding-bottom: 5rem;*/
 
    background: rgb(2,0,36);
    background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(182,87,191,1) 0%, rgba(101,38,181,1) 100%);

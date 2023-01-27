@@ -17,7 +17,7 @@ export class EstudiosComponent implements OnInit {
   ngOnInit(): void {
     this.cargarEstudio();
   }
-
+//Cargar Estudios
   cargarEstudio(): void{
     this.estudioService.list().subscribe(data=>(this.estudios=data));
   }

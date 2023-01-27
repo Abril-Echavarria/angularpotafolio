@@ -21,7 +21,7 @@ export class FotoMiaComponent implements OnInit {
     this.cargarPersona();
 
   }
-
+//Cargar los datos
   cargarPersona():void{
     this.personaService.list().subscribe(data =>{this.personas=data});  }
 

@@ -19,7 +19,7 @@ export class ProyectosComponent implements OnInit {
     this.cargarProyec();
 
   }
-
+//Cargar los proyectos
   cargarProyec(): void{
     this.proyectoService.list().subscribe(data =>{this.proyectos=data} )
   }
