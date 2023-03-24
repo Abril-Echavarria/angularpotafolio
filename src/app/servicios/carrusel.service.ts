@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Carrusel } from '../model/carrusel';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Carrusel } from '../model/carrusel';
 })
 export class CarruselService {
 
-  url='http://localhost:8080/carrusel/'
+  url= environment.url +'carrusel/'
 
   constructor(private httpClient:HttpClient) { }
 
